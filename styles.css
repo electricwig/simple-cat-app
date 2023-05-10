@@ -1,0 +1,21 @@
+body {
+    background-color: papayawhip;
+}
+
+.container {
+    /* setting height to 100vh so that the div can sit in the middle of the screen */
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main_panel {
+    background-color: pink;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    border-radius: 10px;
+}
