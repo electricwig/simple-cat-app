@@ -1,7 +1,7 @@
 // declare our variables
 let nextFactSource = "https://catfact.ninja/fact";
 let nextFact = "";
-let lastFact = "Many cats cannot properly digest cow's milk. Milk and milk products give them diarrhea.";
+let lastFact = "Click the button for a random cat fact.";
 const factText = document.getElementById("fact");
 
 
@@ -28,7 +28,7 @@ function displayNextCatFact() {
 
 
 // get next fact via Fetch API
-// this is an asyncrynous function - TO LEARN FULLY LATER!
+// Note: this is an asyncrynous function - TO LEARN FULLY LATER!
 async function fetchNextFact() {
     let obj;
     const res = await fetch(nextFactSource);
@@ -36,6 +36,8 @@ async function fetchNextFact() {
     obj = await res.json();
     // we then stringify the part of the json data that we need (the cat fact)
     nextFact = JSON.stringify(obj["fact"]);
+    // and trim off the quotes from the string using the substring function
+    nextFact = nextFact.substring(1, (nextFact.length -1));
 }
 fetchNextFact();
 
