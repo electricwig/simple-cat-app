@@ -25,6 +25,7 @@ function displayLastCatFact() {
 function displayNextCatFact() {
     fetchNextFact();
     factText.innerHTML = nextFact;
+    fetchCatImage();
 
     // TO-DO: store current fact as last fact in memory
 }
@@ -45,4 +46,10 @@ async function fetchNextFact() {
 fetchNextFact();
 
 
-
+// bonus cat image function - TO-DO: Rewrite as asynch!
+function fetchCatImage() {
+    let image = document.getElementById("cat-image");
+    fetch("https://api.thecatapi.com/v1/images/search")
+    .then(resp => resp.json())
+    .then(json => image.src = json[0].url)
+}
