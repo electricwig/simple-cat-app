@@ -21,6 +21,11 @@ body {
     height: 200px;
     padding: 50px;
     border-radius: 10px;
+    transition: 0.3s;
+}
+
+.main_panel:hover {
+    background-color: rgb(250, 153, 169);
 }
 
 .main_panel p {
