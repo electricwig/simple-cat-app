@@ -1,8 +1,11 @@
 // declare our variables
 let nextFactSource = "https://catfact.ninja/fact";
 let nextFact = "";
-let lastFact = "Click the button for a random cat fact.";
+let lastFact = "Click for a random cat fact.";
 const factText = document.getElementById("fact");
+const mainPanel = document.getElementById('fact_panel');
+
+mainPanel.addEventListener('click', displayNextCatFact);
 
 
 // on loading of page, retrieve last fact from memory
