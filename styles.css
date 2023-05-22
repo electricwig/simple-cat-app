@@ -11,7 +11,7 @@ body {
 }
 
 .main_panel {
-    background-color: rgb(255, 192, 203);
+    background-color: rgb(252, 170, 184);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -23,7 +23,7 @@ body {
     border-radius: 10px;
     transition: 0.3s;
     position: relative;
-    margin-top: 500px;
+    /* margin-top: 500px; */
 }
 
 .main_panel:hover {
